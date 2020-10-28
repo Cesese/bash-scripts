@@ -83,11 +83,11 @@ do
 			[[ "$debug" = "true" ]] && echo "whitelist = $whitelist"
 			if [ "$whitelist" = "" ]
 			then
-				ochannels=( "" )
+				ochannels=( )
 				octitles=""
-				ocgameids=( "" )
+				ocgameids=( )
 				knownError=true
-				error="$error\nNo one online"
+				error="No one online"
 			else
 				whitelist="${whitelist:1}" # ,1,2,3,... -> 1,2,3,...
 				ochannels=( `echo ${ochannels[@]} | cut -d' ' -f"$whitelist"` )
